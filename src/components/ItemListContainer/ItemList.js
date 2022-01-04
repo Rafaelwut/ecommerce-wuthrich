@@ -19,8 +19,9 @@ const ItemList = () => {
         <div>
             
             { loading ? <h3>Cargando....</h3> :
-            productos.map(prod => <Item/>
-            ) }     
+            productos.map(prod =>(
+                <Item key={prod.id} prod={prod}/>
+             ) ) }     
         </div>
     )
 }
