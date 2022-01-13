@@ -1,22 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import './miCss.css'
 
 
 const Item = ({prod}) => {
    
     return (
-        <div className='col-md-4'>
-            <div className='card w-100 mt-5'>
-                <div className='card-header'>
-                    {`${prod.nombre}`}
-                </div>
-                <div className='card-body'>
-                    {`${prod.description}`}
-                </div>
-                <div className='card-footer'>
-                    {` $ ${prod.precio}`}
-                </div>
-            </div> 
-        </div> 
+
+        <div className='card'>
+            <h5>{prod.nombre}</h5>
+            <h6>Precio: ${prod.precio}</h6>
+            <img src={prod.image} alt={prod.nombre}/>
+
+            <Link to={`/detalle/${prod.id}`}>
+                <button className='btn btn-outline-primary btn-block'>
+                    Detalle del producto
+                </button>
+            </Link>
+        </div>
     )
 }
 

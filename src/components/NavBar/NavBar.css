@@ -1,0 +1,17 @@
+
+.logo{
+    text-decoration: none;
+    color: slategray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navegador{
+    justify-content: flex-end;
+}
+
+.navLink{
+    color: slategray;
+    text-decoration: none;
+    margin: 10px;
+}
+
