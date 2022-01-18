@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemListContainer/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 
@@ -22,10 +21,6 @@ function App() {
       <NavBar />
 
       <Routes>
-
-
-        {/* <ItemCount  min={1} max={15} /> */}
-     
 
         <Route exact path='/' element={ <ItemListContainer   greeting={ greeting } /> }/>
         <Route exact path='/categoria/:idCategoria' element={ <ItemListContainer   greeting={ greeting } /> }/>

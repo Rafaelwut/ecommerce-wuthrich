@@ -1,44 +1,36 @@
 import React, { useState } from 'react'
+import "./miCss.css"
+// import { BsChatSquareText } from 'react-icons/bs'
 
 
 
 
-const ItemCount = ({min, max}) => {
+const ItemCount = ({stock, onAdd}) => {
 
-    const [counter, setCounter] = useState(min)
+    const inicial = 0
 
-    const handleIncrement = () => {
-        
-        if (counter < max){
-            setCounter(estadoPrevio => estadoPrevio + 1)                   //counter+1
-        }
-        else{
-            alert('A superado el stock disponible')
-        }
-                         
-    }
+    const [contador, mueveContador] = useState(inicial)
 
-    const handleDecrement = () => {
+    const sumaContador = () => {
+        contador < stock ? mueveContador(prev => prev +1) : alert ("stock máximo disponible")                    
+    };
 
-        if (counter > min){
-            setCounter(estadoPrevio => estadoPrevio - 1) //counter-1
-            // counter < max && setCounter(estadoPrevio => estadoPrevio - 1)
-            // counter < max ? setCounter(estadoPrevio => estadoPrevio - 1) : alert('Ingrese un número igual o mayor que 1')
-        }
-        else{
-            alert('Ingrese un número igual o mayor que 1')
-        }
-        
+    const restaContador = () => {
+        contador > inicial && mueveContador(prev => prev -1)
+
     }
 
     return (
-        <div>
+        <div className='contador'>
 
-            <h1> { counter } </h1>
+            <h1> { contador } </h1>
 
-            <button onClick={ handleDecrement }>-</button>
+            <button onClick={ restaContador }> - </button>
+            
 
-            <button onClick={ handleIncrement }>+</button>
+            <button onClick={()=> onAdd(contador)} disabled={contador < 1 && 'disabled'} >Agregar al Carrito</button>
+
+            <button onClick={ sumaContador }> + </button>
             
         </div>
     )

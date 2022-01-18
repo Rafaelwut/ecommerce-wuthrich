@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getFetch } from '../Helpers/mock'
-import ItemCount from '../ItemListContainer/ItemCount'
 import ItemDetail from './ItemDetail/ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -23,7 +22,7 @@ const ItemDetailContainer = () => {
             
             <ItemDetail key={producto.id} producto = {producto}/>
            
-            <ItemCount min={1} max={15} />
+            
             
         </div>
     )

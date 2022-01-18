@@ -1,27 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import ItemCount from '../../ItemListContainer/ItemCount'
+import "../../ItemListContainer/miCss.css"
+
 
 const ItemDetail = ( {producto} ) => {
+
+    const [ show, setShow] = useState(true)
+
+    const onAdd = (contador) => {
+        setShow(false)
+        // sumarCarrito({...producto, cantidad: contador})
+    }
+
     return (
         
-        <div className='col-md-4'>
-            <h5>DETALLES DEL PRODUCTO</h5>
-            <div className='card w-100 mt-5'>
-                <div className='card-header'>
-                    {`${producto.nombre}`}
-                </div>
-                <div className="card-body">
-                    <img src={ `${producto.image}`} alt={producto.nombre} className='w-50'/>
-                </div>
-                <div className='card-body'>
-                    {`${producto.description}`}
-                </div>
-                <div className='card-footer'>
-                    {` $ ${producto.precio}`}
-                </div>
-                <div className='card-footer'>
-                    {` stock: ${producto.stock}`}
-                </div>
-            </div> 
+        <div className=' contenedorDetalle' >
+            <h3>DETALLES DEL PRODUCTO</h3>
+
+            <div className='cardDetalle'>
+                <h5>{producto.nombre}</h5>
+                <img src={producto.image} alt={producto.nombre}/>
+                <p>{producto.description}</p>
+                <h6>Precio: ${producto.precio}</h6>
+                <h6>Stock: {producto.stock}</h6>
+            </div>
+
+            {show ? <ItemCount stock={ producto.stock } onAdd={onAdd}/> :
+            <div>
+                <Link to="/cart"><button>Finalizar la Compra</button></Link>
+                <Link to="/"><button>Seguir Comprando</button></Link>       
+            </div>}
 
         </div>
 
