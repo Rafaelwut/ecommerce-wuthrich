@@ -1,16 +1,20 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../../ItemListContainer/ItemCount'
+import { useCartContext } from '../../context/cartContext'
 import "../../ItemListContainer/miCss.css"
 
 
 const ItemDetail = ( {producto} ) => {
 
+    const  {agregarAlCarrito} = useCartContext()
+
     const [ show, setShow] = useState(true)
 
     const onAdd = (contador) => {
         setShow(false)
-        // sumarCarrito({...producto, cantidad: contador})
+        agregarAlCarrito( {...producto, cantidad: contador} )
+
     }
 
     return (
