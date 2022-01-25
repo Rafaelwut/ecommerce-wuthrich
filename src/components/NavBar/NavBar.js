@@ -4,9 +4,18 @@ import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from 'react-bootstrap';
 import CartWidget from './CartWidget';
 import "./NavBar.css"
+import { useCartContext } from '../context/cartContext';
 // import logo from './assets/png/'
 
 const NavBar = () => {
+
+    const { cantidadItem } = useCartContext()
+
+    const numberCart = cantidadItem()
+
+
+
+
     return (
         <Navbar bg="light" variant="light" className='nav'>
             <Container>
@@ -25,6 +34,7 @@ const NavBar = () => {
                     <Link to='/cart'>
                         <CartWidget />
                     </Link> 
+                    {numberCart > 0 ? <div>{numberCart} </div>: <div></div>}
                 </Nav>    
 
             </Container>

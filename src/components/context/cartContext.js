@@ -49,13 +49,20 @@ export const CartContextProvider = ({children}) => {
         return cartList.reduce((acum, item) => acum = acum + item.cantidad, 0)
     }
 
+    const deleteItem = (id) =>{
+        const itemFiltrado= cartList.filter((item) => item.id !== id);
+        setCartList(itemFiltrado);
+    }
+
+
     return(
         <cartContext.Provider value={{
             cartList,
             agregarAlCarrito,
             vaciarCarrito,
             precioTotal,
-            cantidadItem
+            cantidadItem,
+            deleteItem
             
         }}>
             {children}

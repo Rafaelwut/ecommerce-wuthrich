@@ -7,7 +7,7 @@ const productos = [
     { id: "6", image: 'assets/bandejaPosible.jpeg', nombre: "Bandeja desayuno", description: "Bandeja con la palabra posible", categoria:"mate", precio: 1250, stock: 10 },
     { id: "7", image: 'assets/comboMate.jpeg', nombre: "Combo para Mate", description: "Combo para mate de diseño", categoria:"mate", precio: 2000, stock: 15 },
     { id: "8", image: 'assets/florero.jpeg', nombre: "Florero", description: "Florero blanco elegante", categoria:"decoHogar", precio: 900, stock: 10 },
-    { id: "9", image: 'assets/jaboneraCeramica.jpeg', nombre: "Jabonera de Cerámica", description: "Jaboneras de cerámicas", categoria:"baño", precio: 1000, stock: 10 },
+    { id: "9", image: 'assets/jaboneraCeramica.jpeg', nombre: "Jabonera Cerámica", description: "Jaboneras de cerámicas", categoria:"baño", precio: 1000, stock: 10 },
     { id: "10", image: 'assets/jabonNatural.jpeg', nombre: "Jabón Natural", description: "Jabones naturales de avena y miel x 4", categoria:"baño", precio: 1050, stock: 30 },
     { id: "11", image: 'assets/Llavero.jpeg', nombre: "Llavero", description: "Llavero para colgar de diseño", categoria:"decoHogar", precio: 800, stock: 10 },
     { id: "12", image: 'assets/MateCeramica.jpeg', nombre: "Mate de Cerámica", description: "Mates de cerámica", categoria:"mate", precio: 1100, stock: 10 },

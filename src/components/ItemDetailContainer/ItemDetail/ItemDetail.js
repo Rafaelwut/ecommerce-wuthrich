@@ -32,8 +32,8 @@ const ItemDetail = ( {producto} ) => {
 
             {show ? <ItemCount stock={ producto.stock } onAdd={onAdd}/> :
             <div>
-                <Link to="/cart"><button>Finalizar la Compra</button></Link>
-                <Link to="/"><button>Seguir Comprando</button></Link>       
+                <Link to="/cart"><button className='btn btn-outline-primary btn-block'>Finalizar la Compra</button></Link>
+                <Link to="/"><button className='btn btn-outline-primary btn-block'>Seguir Comprando</button></Link>       
             </div>}
 
         </div>
