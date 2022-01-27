@@ -14,8 +14,6 @@ const NavBar = () => {
     const numberCart = cantidadItem()
 
 
-
-
     return (
         <Navbar bg="light" variant="light" className='nav'>
             <Container>
