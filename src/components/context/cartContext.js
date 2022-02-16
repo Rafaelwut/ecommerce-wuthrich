@@ -18,7 +18,7 @@ export const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([])
 
     function agregarAlCarrito(items){
-        // -1 si no lo encuentra
+      
         const indice= cartList.findIndex(i => i.id === items.id)
 
         if(indice > -1){

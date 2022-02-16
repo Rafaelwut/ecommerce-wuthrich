@@ -14,7 +14,6 @@ const ItemDetail = ( {producto} ) => {
     const onAdd = (contador) => {
         setShow(false)
         agregarAlCarrito( {...producto, cantidad: contador} )
-
     }
 
     return (

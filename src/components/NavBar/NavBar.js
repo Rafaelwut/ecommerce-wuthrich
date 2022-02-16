@@ -5,7 +5,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import CartWidget from './CartWidget';
 import "./NavBar.css"
 import { useCartContext } from '../context/cartContext';
-// import logo from './assets/png/'
+
 
 const NavBar = () => {
 
@@ -23,11 +23,13 @@ const NavBar = () => {
                 </Link>
                 
                 <Nav className="me-auto" className="navegador">
+
                     <Link to="/categoria/decoHogar" className='navLink'>DecoHogar</Link>
                     <Link to="/categoria/mate" className='navLink'>Para el Mate</Link>
                     <Link to="/categoria/baño" className='navLink'>Para tu baño</Link>
-       
+                    
                 </Nav>
+                
                 <Nav className='carrito'>
                     <Link to='/cart'>
                         <CartWidget />

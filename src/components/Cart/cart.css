@@ -1,7 +1,6 @@
 .contenedorCart{
     width: 100%;
     text-align: center;
-    /* border: solid green; */
     justify-content: center;
 }
 .cart{
@@ -12,7 +11,6 @@
     border-radius: 12px;
     font-size: 1.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* width: 80%; */
     margin: 40px;
     background-color: rgb(218, 207, 207);
     padding: 10px;
@@ -23,3 +21,19 @@
     height: 120px;
 }
 
+
+.form{
+    width: 100%;
+    padding: 40px;
+}
+
+.formInput{
+    box-shadow: 0px 0px 10px 1px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+}

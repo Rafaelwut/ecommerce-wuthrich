@@ -4,7 +4,7 @@ import '../Cart/cart.css'
 import { Link } from 'react-router-dom'
 import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'
 import Resumen from '../Resumen/Resumen'
-// import { Container } from 'react-bootstrap'
+
 
 
 const Cart = () => {
@@ -22,11 +22,11 @@ const Cart = () => {
     });
 
     const realizarCompra = async (e) => {
+
         e.preventDefault()
         // Nuevo objeto de órdenes
         let orden= {}
-        // orden.date = Timestamp.fromDate(new Date())
-
+        
         orden.buyer = dataForm
         orden.total = precioTotal();
 
@@ -47,12 +47,6 @@ const Cart = () => {
         .then(resp => setIdOrden(resp.id))
         .catch(err => console.log(err))
        
-
-        // Actualizando
-        // const orderDoc = doc (db, 'items' , 'id')
-        // updateDoc(orderDoc, {
-        //  stock:98
-        // }) 
 
         // actualizar stock
         const queryCollection = collection(db, 'items')
@@ -102,25 +96,28 @@ const Cart = () => {
                 ) : (
                     <div className='contenedorCart'>
                         {cartList.map(prod => <li className='cart' key={prod.id}><img className='imgCart' src={prod.image} alt={prod.nombre}/>{prod.nombre} | cantidad: {prod.cantidad}  | precio x unidad: ${prod.precio} <button className='btn btn-outline-primary btn-block' onClick={()=> deleteItem(prod.id)}>X</button></li>)}
-                        
-                        <button className='buttonCart btn btn-outline-primary btn-block' onClick={vaciarCarrito}>Vaciar Carrito</button>
 
-                        <form onSubmit={realizarCompra}>
-                            <input type='text' name='name' placeholder='name' onChange={handleChange} value={dataForm.name}></input>
-                            <br/>
-                            <input type='number' name='phone' placeholder='phone' onChange={handleChange} value={dataForm.phone}></input>
-                            <br/>
-                            <input type='email' name='email' placeholder='email' onChange={handleChange} value={dataForm.email}></input>
 
-                        </form>
-
-                        <button className='buttonCart btn btn-outline-primary btn-block' onClick={realizarCompra}>Generar Orden</button>
-            
                         <div className='cart'>
                             <h3>Cantidad Total:  {cantidadItem()}</h3>
                             <h3>Precio Total:  ${precioTotal()}</h3>
                         </div>
-        
+
+                        
+                        <button className='buttonCart btn btn-outline-primary btn-block' onClick={vaciarCarrito}>Vaciar Carrito</button>
+                        <Link to="/"><button className='btn btn-outline-primary btn-block'>Seguir Comprando</button></Link> 
+                        
+                        
+                        <form className='form' onSubmit={realizarCompra}>
+                            <input className='formInput' type='text'  name='name' placeholder='name' onChange={handleChange} value={dataForm.name} ></input>
+                            <br/>
+                            <input className='formInput' type='number'  name='phone' placeholder='phone' onChange={handleChange} value={dataForm.phone} ></input>
+                            <br/>
+                            <input className='formInput' type='email' name='email' placeholder='email' onChange={handleChange} value={dataForm.email} ></input>
+                            <br/>
+                            <button className='buttonCart btn btn-outline-primary btn-block' onClick={realizarCompra}>Generar Orden</button>
+                        </form>
+
                     </div>
                 )
                 }

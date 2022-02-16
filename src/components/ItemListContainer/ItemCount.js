@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import "./miCss.css"
-// import { BsChatSquareText } from 'react-icons/bs'
-
 
 
 
@@ -27,7 +25,6 @@ const ItemCount = ({stock, onAdd}) => {
 
             <button onClick={ restaContador }> - </button>
             
-
             <button onClick={()=> onAdd(contador)} disabled={contador < 1 && 'disabled'} >Agregar al Carrito</button>
 
             <button onClick={ sumaContador }> + </button>

@@ -1,13 +1,11 @@
-
 import ItemList from './ItemList'
 import { useState, useEffect } from 'react'
-// import { getFetch } from '../Helpers/mock'
 import { useParams } from 'react-router-dom'
 import "./miCss.css"
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 const ItemListContainer = ( {greeting} ) => {
-    // const {greeting} = props
+
 
     const [productos, setproductos] = useState([])
     const [loading, setLoading] = useState(true)
@@ -15,6 +13,7 @@ const ItemListContainer = ( {greeting} ) => {
     const {idCategoria} = useParams()
     
     useEffect(() => {
+        
         if(idCategoria){
             const db = getFirestore();
             const queryCollection = query(collection(db, 'items'),
@@ -36,18 +35,6 @@ const ItemListContainer = ( {greeting} ) => {
 
         }
 
-        // Simulacro de Api
-        // if(idCategoria){
-        //     getFetch
-        //     .then(resp => setproductos(resp.filter(prod => prod.categoria === idCategoria)))
-        //     .catch(err => console.log(err))
-        //     .finally(()=> setLoading(false))
-        // } else{          
-        //     getFetch
-        //     .then(resp => setproductos(resp))
-        //     .catch(err => console.log(err))
-        //     .finally(()=> setLoading(false))
-        // }
 
     }, [idCategoria])
 

@@ -2,7 +2,6 @@ import React from 'react'
 import Item from './Item'
 import './miCss.css'
 
-
 const ItemList = ( {productos} ) => {
 
 
