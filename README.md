@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Proyecto Final React Js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue creado como parte del curso de React Js en CoderHouse. Se trata de un E-Commerce completamente funcional, donde se desarrollo el front end de una tienda online, que incluye un carrito de compras, utilizando los componentes de React y Firebase como servidor en la nube.
 
-## Available Scripts
+***
 
-In the project directory, you can run:
+## El nombre del proyecto: Malvin Desing 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ <img src = "https://user-images.githubusercontent.com/74209318/154346962-ecd75cfe-bf92-481f-a0eb-839dbb79be96.jpeg" width="375"/>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+***
+## Demo de Malvin Desing
 
-### `npm run build`
+Uilizar el siguiente link para ir al demo: https://zealous-euler-511d68.netlify.app/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Navegabilidad:
+La navegabilidad de la aplicación es sencilla, inicialmente podemos ver todos los productos que se ofrecen en la tienda, en la barra de navegación tenemos la opción de seleccionar por categoría.
+Cada tarjeta esta compuesta por una imágen del producto y un botón detalle, al dar click al botón podemos ver en mas detalle el producto (precio, stock, una descripción, etc) y nos da la opción de agregar al carrito las cantidades deseadas. Una vez selecionadas las cantidades y apretando el botón agregar al carrito tenemos la posibilidad de finalizar la compra o seguir comprando.
+Al seleccionar finalizar la compra, nos muestra un resumen de la selección realizada con la cantidad y el precio total de la compra y nos vuelve a dar la opción de seguir comprando,  eliminar un producto en especifico o vaciar el carrito. En el caso de optar por finalizar, completamos un formulario y hacemos clic en Generar Orden, donde se nos facilita el número de orden generado por nuestra compra. Fin
 
-### `npm run eject`
+***
+## Dependencia y Librerias 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Bootstrap - version 5.1.3      
+* Firebase - version 9.6.4 
+* React - version 17.0.2
+* React-boostrap - version 2.0.4
+* React-dom - version 17.0.2
+* React-icons - version 4.3.1
+* React-router-dom - version 6.2.1
+* React-scripts - version 5.0.0
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+***
 
-## Learn More
+## Instalación:
+### Para poner correr la aplicación:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clonar el repositorio del proyecto https://github.com/Rafaelwut/ecommerce-wuthrich.git
+2. Instalar mediante "npm install react-app"
+3. iniciarla con "npm start"
+4. Se abrirá el navegador con el local host http://localhost:3000 
